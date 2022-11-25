@@ -1,6 +1,6 @@
 {
     "name": "nengi-patched",
-    "version": "1.27.0",
+    "version": "1.0.0",
     "description": "patched package of nengi",
     "main": "index.js",
     "browser": "indexBrowser.js",
