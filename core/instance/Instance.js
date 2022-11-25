@@ -111,7 +111,7 @@ class Instance extends EventEmitter {
                 //console.log(this.wsServer)
             })
         } else if (typeof webConfig.httpServer !== 'undefined') {
-            this.wsServer = new WebSocketServer({ server: webConfig.httpServer })
+            this.wsServer = new WebSocketServer({ server: webConfig.httpServer, path: webConfig.httpPath || undefined })
         } else if (typeof webConfig.mock !== 'undefined') {
             // using a connectionless mock mode, see spec folder for interface
             this.wsServer = webConfig.mock

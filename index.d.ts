@@ -32,8 +32,6 @@ declare interface EDictionary {
 }
 
 declare namespace nengi {
-    import EventEmitter from 'events'
-
     type NameAndClassTuple = any
     // why not? [string, new (...args: any[]) => Class] ; causes typescript errors
     export interface Config {
@@ -138,7 +136,7 @@ declare namespace nengi {
         checkVisibility(spatialStructure: any, tick: number)
         saveSnapshot(snapshot: any, protocols: any, tick: number)
     }
-    export class Instance extends EventEmitter {
+    export class Instance {
         constructor(config: Config, webConfig: any)
 
         clients: EDictionary
